@@ -103,7 +103,7 @@ if run_camera:
                 st.session_state.seat_timers[i]["status"] = False
                 st.session_state.seat_timers[i]["is_timer_running"] = False
             else:
-                # AIが人を見失った（しゃがんだ・隠れた・一瞬外に出たなど）場合
+                # AIが人を見失った（しゃがんだ・隠れた・一瞬外に出たなど）場合 
                 # 現在「満席(False)」で、まだタイマーが動いていないならカウントダウン開始
                 if st.session_state.seat_timers[i]["status"] == False and not st.session_state.seat_timers[i]["is_timer_running"]:
                     st.session_state.seat_timers[i]["last_seen"] = loop_time
